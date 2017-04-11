@@ -37,6 +37,14 @@ public class Init {
             scanner.nextLine();
             clientClientSetup.setup();
         }
+        
+        Display display = new Display("Multi Player Pong");
+        
+        Game game = new Game();
+        while(true){
+            game.renderSetup(display);
+        }
+//        game.render();
     }
     
 }
