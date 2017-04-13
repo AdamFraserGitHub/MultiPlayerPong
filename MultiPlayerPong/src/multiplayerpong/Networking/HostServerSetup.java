@@ -35,5 +35,4 @@ public class HostServerSetup {
        ClientName ClientNameThread = new ClientName();
        ClientNameThread.start();
     }
-    
 }

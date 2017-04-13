@@ -5,7 +5,7 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 
 public class Display {
-    private JFrame frame;
+    static JFrame frame;
     private Canvas canvas;
     
     private final String title;

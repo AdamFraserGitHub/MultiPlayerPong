@@ -30,5 +30,4 @@ public class ClientName implements Runnable {
             thread.start();
         }
     }
-    
 }

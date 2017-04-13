@@ -40,11 +40,11 @@ public class Init {
         
         Display display = new Display("Multi Player Pong");
         
-        Game game = new Game();
-        while(true){
-            game.renderSetup(display);
-        }
-//        game.render();
+        ClientGame game = new ClientGame();
+        game.renderSetup(display);
+
+        ClientGameThread gameThread = new ClientGameThread();
+        gameThread.start();
     }
     
 }

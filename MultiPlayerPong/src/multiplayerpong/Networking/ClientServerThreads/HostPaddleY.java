@@ -5,9 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import static multiplayerpong.Networking.ClientServerSetup.*;
 
-
 public class HostPaddleY implements Runnable{
     private Thread thread;
+    public static float opponantY;
     
     public void run() {
         System.out.println("HostPaddleY Socket set up");
@@ -16,7 +16,7 @@ public class HostPaddleY implements Runnable{
             hostPaddleYReader = new BufferedReader(new InputStreamReader(hostPaddleYClientSocket.getInputStream()));
             
             while ((hostPaddleYInput = hostPaddleYReader.readLine()) != null){
-                System.out.println(hostPaddleYInput);
+                opponantY = Float.parseFloat(hostPaddleYInput);
             }
         
         } catch(IOException e) {
