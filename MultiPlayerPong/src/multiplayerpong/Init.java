@@ -13,7 +13,7 @@ public class Init {
     public static void main(String[] args) {
         boolean host = false;
         gameRunning = true;
-        fps = 30;
+        fps = 200;
         
         //VERY temporary solution
         Scanner scanner = new Scanner(System.in);
@@ -39,6 +39,7 @@ public class Init {
         }
         
         Display display = new Display("Multi Player Pong");
+        ClientGame.keyManagerSetup(display);
         
         ClientGame game = new ClientGame();
         game.renderSetup(display);

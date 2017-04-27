@@ -11,6 +11,7 @@ public class ClientGameThread implements Runnable{
         try {
             while(Init.gameRunning) {
                 ClientGame.render();
+                ClientGame.update();
                 thread.sleep((int) 1000 / Init.fps);
             } 
         } catch (Exception e) {
